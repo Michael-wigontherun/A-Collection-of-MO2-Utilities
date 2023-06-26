@@ -1,0 +1,1 @@
+BodyslideGroupGenerator.exe -E -P="The folder containing your .osp Slider Sets" -O="Output Slider Groups Folder" -N="Name of Output File without extension" -S="CBBE"
