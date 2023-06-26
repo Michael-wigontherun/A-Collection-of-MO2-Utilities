@@ -27,7 +27,7 @@ You may need to run run this when the mod is updated, depending on if they chang
 
 ## QA
 Q: Why only MO2?
-A: That's because I use MO2. And making things for other mod managers when I don't use them I don't care to go back and forth with other people. On what they need to do.
+- A: That's because I use MO2. And making things for other mod managers when I don't use them I don't care to go back and forth with other people. On what they need to do.
 
 Q: Why do you make such low effort Thumbnails?
-A: I have no artistic talent. My skills are with programming.
+- A: I have no artistic talent. My skills are with programming.
