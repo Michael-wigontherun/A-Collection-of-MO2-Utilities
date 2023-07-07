@@ -24,6 +24,10 @@ You may need to run run this when the mod is updated, depending on if they chang
 2. -P="Path to MO2 Mod" : Path to MO2 mod not a DAR folder
 3. -S=".csv name or starting priority number" : Create a CSV anywhere you just need to add the path to it inside this argument. Or you could place a number in this arguement and it will iterate up from there on the priority.
 
+### DARPriorityReader
+This does not edit anything so its fine to run over top of the data folder.
+1. Edit "DARPriorityReader.bat"
+2. 2. -P="Path to MO2 Mod or to Skyrim's Data folder" : Path to MO2 mod not a DAR folder or to Skyrim's Data folder
 
 ## QA
 Q: Why only MO2?
