@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -9,6 +9,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MO2CollectionGlobalLibrary\MO2CollectionGlobalLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DARPriorityReader.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
