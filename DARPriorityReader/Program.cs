@@ -10,7 +10,7 @@ namespace DARPriorityReader
         {
             Console.WriteLine("Hello, World!");
 
-            args = new string[] { @"-P=E:\SkyrimMods\MO2\mods\Fancy Sword Moveset for MCO - Sword - 249999900" };
+            //args = new string[] { @"-P=E:\SkyrimMods\MO2\mods\Fancy Sword Moveset for MCO - Sword - 249999900" };
 
             try
             {
