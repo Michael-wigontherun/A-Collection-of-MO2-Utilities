@@ -27,7 +27,7 @@ You may need to run run this when the mod is updated, depending on if they chang
 ### DARPriorityReader
 This does not edit anything so its fine to run over top of the data folder.
 1. Edit "DARPriorityReader.bat"
-2. 2. -P="Path to MO2 Mod or to Skyrim's Data folder" : Path to MO2 mod not a DAR folder or to Skyrim's Data folder
+2. -P="Path to MO2 Mod or to Skyrim's Data folder" : Path to MO2 mod not a DAR folder or to Skyrim's Data folder
 
 ## QA
 Q: Why only MO2?
