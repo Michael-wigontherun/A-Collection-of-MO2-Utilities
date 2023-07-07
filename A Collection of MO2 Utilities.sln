@@ -13,8 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DARPriorityReader", "DARPri
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{92E503CF-2AA9-4D5C-AB22-7CADA3A906C1}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		A Collection of MO2 Utilities.code-workspace = A Collection of MO2 Utilities.code-workspace
 		CopyToReleaseSets.bat = CopyToReleaseSets.bat
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global

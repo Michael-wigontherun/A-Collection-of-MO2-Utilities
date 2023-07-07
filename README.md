@@ -1,5 +1,5 @@
 # A Collection of MO2 Utilities
-I will put all my smaller automation tools I make here. All of them don't strictly require MO2, but with these automation tools running them on top of your Data folder will have adverse effects. I will not assist people using other mod managers for this page. If you want to run these without MO2 unpack them into a separate folder then run over the separate folder. I still recommend using MO2 over any other thing for managing Bethesda Game Studio games.
+I will put all my smaller automation tools I make here. All of them don't strictly require MO2, but with these automation tools running them on top of your Data folder could have adverse effects. I will not assist people using other mod managers for this page. If you want to run these without MO2 unpack them into a separate folder then run over the separate folder. I still recommend using MO2 over any other thing for managing Bethesda Game Studio games.
 
 ## Installation
 Install instructions are applied the same to all.
