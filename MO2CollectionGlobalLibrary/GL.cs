@@ -84,6 +84,8 @@
                 if (arg.Equals("-Help"))
                 {
                     PrintHelp();
+                    settings.Start = false;
+                    break;
                 }
                 else if (arg.Contains("-P=", StringComparison.OrdinalIgnoreCase))
                 {

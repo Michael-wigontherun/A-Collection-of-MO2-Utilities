@@ -5,18 +5,10 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <RunPostBuildEvent>Always</RunPostBuildEvent>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\MO2CollectionGlobalLibrary\MO2CollectionGlobalLibrary.csproj" />
   </ItemGroup>
-
-  <ItemGroup>
-    <None Update="BodyslideGroupGenerator.bat">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
 
 </Project>

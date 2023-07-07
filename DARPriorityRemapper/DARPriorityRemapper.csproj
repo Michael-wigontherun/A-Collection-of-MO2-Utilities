@@ -21,8 +21,4 @@
     </None>
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="$(ConfigurationName) == Release">
-    <Exec Command="mkdir &quot;..\Release Sets&quot;&#xD;&#xA;mkdir &quot;..\Release Sets\A Collection of MO2 Utilities&quot;&#xD;&#xA;mkdir &quot;..\Release Sets\DARPriorityRemapper&quot;&#xD;&#xA;xcopy /s &quot;.\bin\Release\net6.0&quot; &quot;..\Release Sets\A Collection of MO2 Utilities&quot;&#xD;&#xA;xcopy /s &quot;.\bin\Release\net6.0&quot; &quot;..\Release Sets\DARPriorityRemapper&quot;" />
-  </Target>
-
 </Project>

@@ -27,7 +27,6 @@ namespace DARPriorityRemapper
                 return;
             }
 
-             
 
             if (File.Exists(_Settings.ExtraString))
             {
