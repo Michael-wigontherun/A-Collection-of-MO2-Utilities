@@ -11,4 +11,10 @@
     <ProjectReference Include="..\MO2CollectionGlobalLibrary\MO2CollectionGlobalLibrary.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Enable_zMerged_Disabled_Plugins.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
