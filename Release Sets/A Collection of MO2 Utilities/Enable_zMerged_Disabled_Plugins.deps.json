@@ -6,12 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "DARPriorityRemapper/1.0.0": {
+      "Enable_zMerged_Disabled_Plugins/1.0.0": {
         "dependencies": {
           "MO2CollectionGlobalLibrary": "1.0.0"
         },
         "runtime": {
-          "DARPriorityRemapper.dll": {}
+          "Enable_zMerged_Disabled_Plugins.dll": {}
         }
       },
       "MO2CollectionGlobalLibrary/1.0.0": {
@@ -22,7 +22,7 @@
     }
   },
   "libraries": {
-    "DARPriorityRemapper/1.0.0": {
+    "Enable_zMerged_Disabled_Plugins/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

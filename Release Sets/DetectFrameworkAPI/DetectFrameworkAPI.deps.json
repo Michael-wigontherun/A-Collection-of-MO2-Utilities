@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "DetectFrameworkAPI/1.0.0": {
+        "dependencies": {
+          "APIReader": "1.0.0",
+          "MO2CollectionGlobalLibrary": "1.0.0"
+        },
+        "runtime": {
+          "DetectFrameworkAPI.dll": {}
+        }
+      },
+      "APIReader/1.0.0": {
+        "dependencies": {
+          "MO2CollectionGlobalLibrary": "1.0.0"
+        },
+        "runtime": {
+          "APIReader.dll": {}
+        }
+      },
+      "MO2CollectionGlobalLibrary/1.0.0": {
+        "runtime": {
+          "MO2CollectionGlobalLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DetectFrameworkAPI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "APIReader/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MO2CollectionGlobalLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

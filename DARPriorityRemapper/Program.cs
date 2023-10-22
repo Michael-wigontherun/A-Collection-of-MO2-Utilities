@@ -4,15 +4,13 @@ namespace DARPriorityRemapper
 {
     internal class Program
     {
-        public static Settings _Settings = new();
-
         public static void Main(string[] args)
         {
             GL.WriteLine("Hello, World!");
 
-            _Settings = Settings.Args(args, false, false, "This will be the .csv file name for your dar configuration,\nExample: \n  This locates DAR folder number 0, 20, and 302\n  and the command argument -S=\"200000\"\n  This will change 0 to 200000\n  This will change 20 to 200001\n  This will change 302 to 200002");
+            GL._Settings = Settings.Args(typeof(Program).Namespace!.ToString(), args, false, false, true, "This will be the .csv file name for your dar configuration,\nExample: \n  This locates DAR folder number 0, 20, and 302\n  and the command argument -S=\"200000\"\n  This will change 0 to 200000\n  This will change 20 to 200001\n  This will change 302 to 200002", pathRequired: false);
 
-            if (!_Settings.Start)
+            if (!GL._Settings.Start)
             {
                 GL.WriteLine("Problem with Arguments.");
                 GL.WriteLine("Run with the Argument \"-Help\" without quotes for help.");
@@ -20,17 +18,16 @@ namespace DARPriorityRemapper
                 return;
             }
 
-            if (File.Exists(Path.Combine(_Settings.Path, "Skyrim.esm")))
+            if (File.Exists(Path.Combine(GL._Settings.Path, "Skyrim.esm")))
             {
                 GL.WriteLine("This can not and should not be run on your data folder you will regret it");
                 Console.ReadLine();
                 return;
             }
 
-
-            if (File.Exists(_Settings.ExtraString))
+            if (File.Exists(GL._Settings.ExtraString))
             {
-                List<DARMod> dARMods = DARMod.ReadCSV(_Settings.ExtraString, out bool notFail);
+                List<DARMod> dARMods = DARMod.ReadCSV(GL._Settings.ExtraString, out bool notFail);
 
                 if (!notFail)
                 {
@@ -39,7 +36,7 @@ namespace DARPriorityRemapper
                     return;
                 }
 
-                IEnumerable<string> _CustomConditionFolders = Directory.GetDirectories(Path.Combine(_Settings.Path, "Meshes"),
+                IEnumerable<string> _CustomConditionFolders = Directory.GetDirectories(Path.Combine(GL._Settings.Path, "Meshes"),
                     "_CustomConditions",
                     SearchOption.AllDirectories);
                 foreach (string _CustomConditionFolder in _CustomConditionFolders)
@@ -56,12 +53,12 @@ namespace DARPriorityRemapper
                     }
                 }
             }//End CSV run
-            else if(Int32.TryParse(_Settings.ExtraString, out int StartPriority))
+            else if(Int32.TryParse(GL._Settings.ExtraString, out int StartPriority))
             {
                 GL.WriteLine("Entering iteration mode from: " + StartPriority);
                 Console.ReadLine();
 
-                IEnumerable<string> _CustomConditionFolders = Directory.GetDirectories(Path.Combine(_Settings.Path, "Meshes"),
+                IEnumerable<string> _CustomConditionFolders = Directory.GetDirectories(Path.Combine(GL._Settings.Path, "Meshes"),
                     "_CustomConditions",
                     SearchOption.AllDirectories);
                 foreach (string _CustomConditionFolder in _CustomConditionFolders)
@@ -125,73 +122,7 @@ namespace DARPriorityRemapper
             }
 
 
-            
-            Console.ReadLine();
-        }
-
-    }
-
-    public class DARMod
-    {
-        public string OrgFolderName = string.Empty;
-        public int OrgPriority = int.MinValue;
-        public int NewPriority = int.MinValue;
-
-        public DARMod(int orgPriority, int newPriority)
-        {
-            this.OrgPriority = orgPriority;
-            this.NewPriority = newPriority;
-        }
-
-        public DARMod(string orgFolderName, int orgPriority)
-        {
-            this.OrgFolderName = orgFolderName;
-            OrgPriority = orgPriority;
-        }
-
-        public DARMod(string orgFolderName, int orgPriority, int newPriority) : this(orgFolderName, orgPriority)
-        {
-            NewPriority = newPriority;
-        }
-
-        public static List<DARMod> ReadCSV(string csvPath, out bool notFail)
-        {
-            notFail = true;
-            List<DARMod> list = new List<DARMod>();
-
-            string[] fileLines = File.ReadAllLines(csvPath);
-
-            for(int i = 0; i < fileLines.Length; i++)
-            {
-                string[] lineArr = fileLines[i].Split(';');
-
-                if (lineArr.Length < 2)
-                {
-                    GL.WriteLine("Missing data on line " + (i + 1));
-                    notFail = false;
-                    break;
-                }
-
-                if (!Int32.TryParse(lineArr[0], out int orgPriority))
-                {
-                    GL.WriteLine("Original priority not int on line " + (i + 1));
-                    notFail = false;
-                    break;
-                }
-
-                if (!Int32.TryParse(lineArr[1], out int newPriority))
-                {
-                    GL.WriteLine("New priority not int on line " + (i + 1));
-                    notFail = false;
-                    break;
-                }
-
-                list.Add(new DARMod(lineArr[0], orgPriority, newPriority));
-
-
-            }
-
-            return list;
+            GL.EndPause();
         }
 
     }

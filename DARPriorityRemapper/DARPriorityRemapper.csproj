@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DARPriorityReader\DARPriorityReader.csproj" />
     <ProjectReference Include="..\MO2CollectionGlobalLibrary\MO2CollectionGlobalLibrary.csproj" />
   </ItemGroup>
 
