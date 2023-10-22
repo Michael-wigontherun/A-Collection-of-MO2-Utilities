@@ -15,9 +15,9 @@ Duplicating and renaming the bat files will prevent them from being overwritten 
 
 ## BodyslideGroupGenerator
 This will generate a Bodyslide SliderGroup from a folder of .osp files
+Probably compatible with Fallout 4s Bodyslide.
 
 ### BodyslideGroupGenerator
-Probably compatible with Fallout 4s Bodyslide.
 You may need to run run this when the mod is updated, depending on if they change the names of the Bodyslide projects.
 1. Edit "BodyslideGroupGenerator.bat".
 2. -P="The folder containing your .osp Slider Sets" : This should be the folder at "[MO2 Mod]\CalienteTools\Bodyslide\SliderSets"
@@ -27,6 +27,7 @@ You may need to run run this when the mod is updated, depending on if they chang
 
 ## Enable_zMerged_Disabled_Plugins
 Enables plugins in the load order based off of a zMerge merge.json
+Compatible with Fallout 4.
 
 ### Enable_zMerged_Disabled_Plugins
 This could be used by other Mod Managers
