@@ -15,6 +15,8 @@ Duplicating and renaming the bat files will prevent them from being overwritten 
 
 ## BodyslideGroupGenerator
 This will generate a Bodyslide SliderGroup from a folder of .osp files
+
+### BodyslideGroupGenerator
 Probably compatible with Fallout 4s Bodyslide.
 You may need to run run this when the mod is updated, depending on if they change the names of the Bodyslide projects.
 1. Edit "BodyslideGroupGenerator.bat".
@@ -22,6 +24,15 @@ You may need to run run this when the mod is updated, depending on if they chang
 3. -O="Output Slider Groups Folder" : This should not be the same folder as the mod because it could be updated and you will need to re-run if the .xml is deleted
 4. -N="Name of Output File without extension" : The name you want for the outputted .xml file. I like to use the name of the mod.
 5. -S="CBBE" : Replace CBBE with what ever body group it should be.
+
+## Enable_zMerged_Disabled_Plugins
+Enables plugins in the load order based off of a zMerge merge.json
+
+### Enable_zMerged_Disabled_Plugins
+This could be used by other Mod Managers
+1. Edit "Enable_zMerged_Disabled_Plugins.bat"
+2. -P="File Path directly to a merge.json" : merge.json's are the files inside a "Merge - YourMerge" folder
+3. -S="Path to a plugins.txt" : This can be in a MO2 Profile Folder or inside your Local AppData, If you are a MO2 user and you set it to the Local AppData, you must run the Bat through MO2
 
 ## DARPriority
 Two tools to assist with remapping DAR Mods, similar to my [OAR Priority tool](https://www.nexusmods.com/skyrimspecialedition/mods/93992) except for DAR
@@ -53,13 +64,6 @@ This will create a report of a MO2 mod folder by comparing FrameworkAPI files ge
 This does not edit anything so its fine to run over top of the data folder. However it will result in random-ish output that isn't really useful
 1. Edit "DetectFrameworkAPI.bat"
 2. -P="MO2 Mod folder or source scripts folder in a MO2 Mod folder" : This looks for the .psc files to read so any folder or root folder works.
-
-## Enable_zMerged_Disabled_Plugins
-Enables plugins in the load order based off of a zMerge merge.json
-This could be used by other Mod Managers
-1. Edit "Enable_zMerged_Disabled_Plugins.bat"
-2. -P="File Path directly to a merge.json" : merge.json's are the files inside a "Merge - YourMerge" folder
-3. -S="Path to a plugins.txt" : This can be in a MO2 Profile Folder or inside your Local AppData, If you are a MO2 user and you set it to the Local AppData, you must run the Bat through MO2
 
 ## QA
 Q: Why only MO2?
