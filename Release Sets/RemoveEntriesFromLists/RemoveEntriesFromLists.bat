@@ -1,0 +1,1 @@
+RemoveEntriesFromLists.exe -P="Path to plugin needing to be cleaned" -S="List of plugins names separated with , that should be removed from any list in the plugin"

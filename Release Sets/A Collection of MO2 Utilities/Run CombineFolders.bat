@@ -1,0 +1,1 @@
+CombineFolders.exe -P="Folder Start path to search" -O="Path to output to" -S="Name of folder(s) to search for" -e

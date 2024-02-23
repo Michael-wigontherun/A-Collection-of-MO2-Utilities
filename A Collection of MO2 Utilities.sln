@@ -27,6 +27,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIReader", "APIReader\APIR
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enable_zMerged_Disabled_Plugins", "Enable_zMerged_Disabled_Plugins\Enable_zMerged_Disabled_Plugins.csproj", "{CEB9D359-F28A-4F5F-B36E-8AF269D46517}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RemoveEntriesFromLists", "RemoveEntriesFromLists\RemoveEntriesFromLists.csproj", "{99E9C91E-621F-4F68-A439-EBE37B5FAB50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombineFolders", "CombineFolders\CombineFolders.csproj", "{3979982D-0F45-4E7D-B935-0319BB041DE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtraBBCODEFormat_NOT_A_RELEASE_PROJECT_ONLY_MEANT_FOR_GENERATING_MY_NEXUS_BBCODE", "ExtraBBCODEFormat_NOT_A_RELEASE_PROJECT_ONLY_MEANT_FOR_GENERATING_MY_NEXUS_BBCODE\ExtraBBCODEFormat_NOT_A_RELEASE_PROJECT_ONLY_MEANT_FOR_GENERATING_MY_NEXUS_BBCODE.csproj", "{D3088793-747A-4A31-9F0E-09CC6F1DDF2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +67,18 @@ Global
 		{CEB9D359-F28A-4F5F-B36E-8AF269D46517}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEB9D359-F28A-4F5F-B36E-8AF269D46517}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEB9D359-F28A-4F5F-B36E-8AF269D46517}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99E9C91E-621F-4F68-A439-EBE37B5FAB50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99E9C91E-621F-4F68-A439-EBE37B5FAB50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99E9C91E-621F-4F68-A439-EBE37B5FAB50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99E9C91E-621F-4F68-A439-EBE37B5FAB50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3979982D-0F45-4E7D-B935-0319BB041DE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3979982D-0F45-4E7D-B935-0319BB041DE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3979982D-0F45-4E7D-B935-0319BB041DE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3979982D-0F45-4E7D-B935-0319BB041DE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3088793-747A-4A31-9F0E-09CC6F1DDF2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3088793-747A-4A31-9F0E-09CC6F1DDF2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3088793-747A-4A31-9F0E-09CC6F1DDF2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3088793-747A-4A31-9F0E-09CC6F1DDF2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

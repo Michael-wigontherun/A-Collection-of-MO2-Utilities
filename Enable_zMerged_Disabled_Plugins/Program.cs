@@ -10,13 +10,7 @@ namespace Enable_zMerged_Disabled_Plugins
             Console.WriteLine("Hello, World!");
             string extraS = "Path to the Plugins.txt file inside a MO2 Profile or the one in your Local AppData";
             GL._Settings = Settings.Args(typeof(Program).Namespace!.ToString(), args, false, false, false, extraS);
-            if (!GL._Settings.Start)
-            {
-                GL.WriteLine("Problem with Arguments.");
-                GL.WriteLine("Run with the Argument \"-Help\" without quotes for help.");
-                Console.ReadLine();
-                return;
-            }
+            
             if(!File.Exists(GL._Settings.Path) || !GL._Settings.Path.Contains(".json", StringComparison.OrdinalIgnoreCase))
             {
                 GL.WriteLine("Merge.json not found.");

@@ -9,13 +9,6 @@ namespace DARPriorityReader
             Console.WriteLine("Hello, World!");
 
             GL._Settings = Settings.Args(typeof(Program).Namespace!.ToString(), args, false, false, false, "Add -S=\"MO2\"\nDARPriorityReader look at the folder as MO2's mods folder and it will search and output paths using MO2 mods.");
-            if (!GL._Settings.Start)
-            {
-                GL.WriteLine("Problem with Arguments.");
-                GL.WriteLine("Run with the Argument \"-Help\" without quotes for help.");
-                Console.ReadLine();
-                return;
-            }
             
             try
             {

@@ -10,17 +10,12 @@ namespace BodyslideGroupGenerator
             try
             {
                 GL.WriteLine("Hello, World!");
-
-                GL._Settings = Settings.Args(typeof(Program).Namespace!.ToString(), args, true, true, true, "Enter the name of the base bodyslide group.\nYou can locate this by looking at another slidergroup XML.\nExample: -S=\"CBBE\" is the group name for CBBE based bodies.");
+                string ExtraString = "Enter the name of the base bodyslide group. Can be a list." +
+                    "\nYou can locate this by looking at another slidergroup XML." +
+                    "\nExample: -S=\"CBBE\" is the group name for CBBE based bodies." +
+                    "\nExample: -s=\"CBBE, Common Clothes and Armors\"";
+                GL._Settings = Settings.Args(typeof(Program).Namespace!.ToString(), args, true, true, true, ExtraString);
                 
-                if (!GL._Settings.Start)
-                {
-                    GL.WriteLine("Problem with Arguments.");
-                    GL.WriteLine("Run with the Argument \"-Help\" without quotes for help.");
-                    Console.ReadLine();
-                    return;
-                }
-
                 List<string> objectNames = new();
 
                 if (Directory.Exists(GL._Settings.Path))
@@ -43,24 +38,32 @@ namespace BodyslideGroupGenerator
 
                 if (objectNames.Any())
                 {
+                    var groupNames = GL._Settings.ExtraString.Split(',', StringSplitOptions.TrimEntries);
+
                     string outputFilePath = Path.Combine(GL._Settings.OutputPath, GL._Settings.OutputName + ".xml");
 
                     using (StreamWriter sw = new(outputFilePath, false))
                     {
                         sw.WriteLine("<?xml version=\"1.0\" encoding=\"UTF - 8\"?>");
                         sw.WriteLine("<SliderGroups>");
-                        sw.WriteLine("\t<Group name=\"CBBE\">");
-                        foreach (string objectName in objectNames)
-                        {
-                            sw.WriteLine($"\t\t<Member name=\"{objectName}\"/>");
-                        }
-                        sw.WriteLine("\t</Group>");
                         sw.WriteLine($"\t<Group name=\"{GL._Settings.OutputName}\">");
                         foreach (string objectName in objectNames)
                         {
                             sw.WriteLine($"\t\t<Member name=\"{objectName}\"/>");
                         }
                         sw.WriteLine("\t</Group>");
+
+                        foreach (string groupName in groupNames)
+                        {
+                            sw.WriteLine($"\t<Group name=\"{groupName}\">");
+                            foreach (string objectName in objectNames)
+                            {
+                                sw.WriteLine($"\t\t<Member name=\"{objectName}\"/>");
+                            }
+                            sw.WriteLine("\t</Group>");
+                        }
+
+
                         sw.WriteLine("</SliderGroups>");
                     }
 

@@ -10,14 +10,6 @@ namespace DARPriorityRemapper
 
             GL._Settings = Settings.Args(typeof(Program).Namespace!.ToString(), args, false, false, true, "This will be the .csv file name for your dar configuration,\nExample: \n  This locates DAR folder number 0, 20, and 302\n  and the command argument -S=\"200000\"\n  This will change 0 to 200000\n  This will change 20 to 200001\n  This will change 302 to 200002", pathRequired: false);
 
-            if (!GL._Settings.Start)
-            {
-                GL.WriteLine("Problem with Arguments.");
-                GL.WriteLine("Run with the Argument \"-Help\" without quotes for help.");
-                Console.ReadLine();
-                return;
-            }
-
             if (File.Exists(Path.Combine(GL._Settings.Path, "Skyrim.esm")))
             {
                 GL.WriteLine("This can not and should not be run on your data folder you will regret it");

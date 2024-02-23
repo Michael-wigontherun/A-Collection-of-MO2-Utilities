@@ -32,11 +32,46 @@ namespace MO2CollectionGlobalLibrary
                 Console.ReadLine();
             }
         }
+
+        //Came from the Microsofts .Net documentation. Why this method isn't built into .Net I have no clue
+        //https://learn.microsoft.com/en-us/dotnet/standard/io/how-to-copy-directories
+        public static void CopyDirectory(string sourceDir, string destinationDir, bool recursive)
+        {
+            // Get information about the source directory
+            var dir = new DirectoryInfo(sourceDir);
+
+            // Check if the source directory exists
+            if (!dir.Exists)
+                throw new DirectoryNotFoundException($"Source directory not found: {dir.FullName}");
+
+            // Cache directories before we start copying
+            DirectoryInfo[] dirs = dir.GetDirectories();
+
+            // Create the destination directory
+            Directory.CreateDirectory(destinationDir);
+
+            // Get the files in the source directory and copy to the destination directory
+            foreach (FileInfo file in dir.GetFiles())
+            {
+                string targetFilePath = Path.Combine(destinationDir, file.Name);
+                file.CopyTo(targetFilePath);
+            }
+
+            // If recursive and copying subdirectories, recursively call this method
+            if (recursive)
+            {
+                foreach (DirectoryInfo subDir in dirs)
+                {
+                    string newDestinationDir = Path.Combine(destinationDir, subDir.Name);
+                    CopyDirectory(subDir.FullName, newDestinationDir, true);
+                }
+            }
+        }
     }
 
     public class Settings
     {
-        public static Settings Args(string logName, string[] args, bool outputFolder, bool outputName, bool requiresExtra, string? ExtraName, bool pathRequired = true)
+        public static Settings Args(string logName, string[] args, bool outputFolder, bool outputName, bool requiresExtra, string? ExtraName, bool pathRequired = true, bool closeifFail = true)
         {
             Settings settings = new();
             settings.LogName = logName + ".txt";
@@ -138,6 +173,17 @@ namespace MO2CollectionGlobalLibrary
             if (outputFolder && settings.OutputPath.Equals(String.Empty)) settings.Start = false;
             if (outputName && settings.OutputName.Equals(String.Empty)) settings.Start = false;
             if (requiresExtra && settings.ExtraString.Equals(String.Empty)) settings.Start = false;
+            if (closeifFail)
+            {
+                if (!settings.Start)
+                {
+                    GL.WriteLine("Problem with Arguments.");
+                    GL.WriteLine("Run with the Argument \"-Help\" without quotes for help.");
+                    Console.ReadLine();
+                    Environment.Exit(0);
+                }
+            }
+            
 
             return settings;
         }
@@ -160,19 +206,25 @@ namespace MO2CollectionGlobalLibrary
 
         public string LogName = String.Empty;
 
-        public string SetDefaultOutputPaths(string outputPath, string outputName)
+        public string SetDefaultOutputPaths(string outputPath, string? outputName, bool create = true)
         {
             if (OutputPath.Equals(String.Empty))
             {
                 OutputPath = outputPath;
             }
-            if (OutputName.Equals(String.Empty))
+            if(outputName != null)
             {
-                OutputName = outputName;
+                if (OutputName.Equals(String.Empty))
+                {
+                    OutputName = outputName;
+                }
             }
 
-            Directory.CreateDirectory(OutputPath);
-            File.Create(OutputName).Close();
+            if (create)
+            {
+                Directory.CreateDirectory(OutputPath);
+                File.Create(GetOutputPath()).Close();
+            }
 
             return GetOutputPath();
         }

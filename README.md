@@ -11,7 +11,7 @@ Install instructions are applied the same to all.
 ## Usage Directions
 For console Applications you can double click the exe to bring up the help menu or run them with the -help argument.
 -help will also give you some more help for the -S= arguments.
-Duplicating and renaming the bat files will prevent them from being overwritten when updating
+Duplicating and renaming the bat files will prevent them from being overwritten when updating.
 
 ## BodyslideGroupGenerator
 This will generate a Bodyslide SliderGroup from a folder of .osp files
@@ -66,6 +66,27 @@ This will create a report of a MO2 mod folder by comparing FrameworkAPI files ge
 This does not edit anything so its fine to run over top of the data folder. However it will result in random-ish output that isn't really useful
 1. Edit "DetectFrameworkAPI.bat"
 2. -P="MO2 Mod folder or source scripts folder in a MO2 Mod folder" : This looks for the .psc files to read so any folder or root folder works.
+
+## RemoveEntriesFromLists
+This will run over a specified plugin and remove any entries from LevelLists, Containers, and 
+This will run on a single plugin. It will touch nothing but that one plugin.
+
+### RemoveEntriesFromListsFormLists that have a matching mod key that you specify.
+1. Edit "RemoveEntriesFromLists.bat"
+2. -P="Path to plugin needing to be cleaned" : Absolute path directly to the plugin you wish to clean
+3. -S="List of plugins names separated with , that should be removed from any list in the plugin" : This can be a list, Examples:
+
+    -S="aMidianBorn_ContentAddon.esp"
+
+    -S="aMidianBorn_ContentAddon.esp, OWL_AMB_CA_Patch.esp"
+
+## CombineFolders
+This will combine folders from separated folders. This will help with those annoying FOMODs that still do not have plugin detection or you just want all the options.
+
+### CombineFolders
+1. -P="Folder Start path to search" : Path to base folder
+2. -O="Path to output to" : Folder you want the files output to, you can remove this if you want the base folder to also be the output folder
+3. -S="Name of folder(s) to search for" : Folders you want copied
 
 ## QA
 Q: Why only MO2?
