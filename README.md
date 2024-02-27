@@ -71,7 +71,7 @@ This does not edit anything so its fine to run over top of the data folder. Howe
 This will run over a specified plugin and remove any entries from LevelLists, Containers, and 
 This will run on a single plugin. It will touch nothing but that one plugin.
 
-### RemoveEntriesFromListsFormLists that have a matching mod key that you specify.
+### RemoveEntriesFromListsFormLists
 1. Edit "RemoveEntriesFromLists.bat"
 2. -P="Path to plugin needing to be cleaned" : Absolute path directly to the plugin you wish to clean
 3. -S="List of plugins names separated with , that should be removed from any list in the plugin" : This can be a list, Examples:
@@ -84,9 +84,32 @@ This will run on a single plugin. It will touch nothing but that one plugin.
 This will combine folders from separated folders. This will help with those annoying FOMODs that still do not have plugin detection or you just want all the options.
 
 ### CombineFolders
-1. -P="Folder Start path to search" : Path to base folder
-2. -O="Path to output to" : Folder you want the files output to, you can remove this if you want the base folder to also be the output folder
-3. -S="Name of folder(s) to search for" : Folders you want copied
+1. Edit "Run CombineFolders.bat"
+2. -P="Folder Start path to search" : Path to base folder
+3. -O="Path to output to" : Folder you want the files output to, you can remove this if you want the base folder to also be the output folder
+4. -S="Name of folder(s) to search for" : Folders you want copied
+
+## DetectProblematicRecordsForMutagen
+This is a diagnostic tool to detect Records that can not be read Mutagen and can crash Mutagen based programs, like Synthesis or other Programs I have made using Mutagen.
+It will give you a list of records that are problematic for you to locate using xEdit.
+
+Do not tell me about errors this reports I can do nothing about them as it has to do with your plugins. It is designed to find and report errors. Fix your plugins yourself.
+
+### DetectProblematicRecordsForMutagen
+1. Edit "Run DetectProblematicRecordsForMutagen.bat"
+2. -P="Path to plugin" : The path to the plugin you suspect has an issue.
+
+## DetectFormLinksInRecords
+This will detect any and all FormLinks inside your plugin and report them as a yaml file.
+This helps with removing master files from plugins. As it will tell you exactly which records are linked in a plugin so you can open it in xEdit and delete them manually.
+I will not add any kind of automatic deletion function to this.
+
+### DetectFormLinksInRecords
+1. Edit "Run DetectFormLinksInRecords.bat"
+2. -P="Path to plugin" : The path to the plugin you wish to have a report on
+3. Extra sorting can be done with the -S= argument.
+    Example: -S="doublejump.esp".
+    Example: -S="doublejump.esp, INIGO.esp".
 
 ## QA
 Q: Why only MO2?

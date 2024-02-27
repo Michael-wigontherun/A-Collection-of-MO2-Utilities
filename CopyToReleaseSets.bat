@@ -11,6 +11,8 @@ set DetectFrameworkAPIRAR= ".\Release Sets\DetectFrameworkAPI.rar"
 set zMergeEnablerRAR= ".\Release Sets\Enable_zMerged_Disabled_Plugins.rar"
 set CombineFoldersRAR= ".\Release Sets\CombineFolders.rar"
 set RemoveEntriesFromListsRAR= ".\Release Sets\RemoveEntriesFromLists.rar"
+set DetectFormLinksInRecordsRAR= ".\Release Sets\DetectFormLinksInRecords.rar"
+set DetectProblematicRecordsForMutagenRAR= ".\Release Sets\DetectProblematicRecordsForMutagen.rar"
 
 del /q %CollectionRAR%
 del /q %BodyslideGroupGeneratorRAR%
@@ -19,6 +21,7 @@ del /q %DetectFrameworkAPIRAR%
 del /q %zMergeEnablerRAR%
 del /q %CombineFoldersRAR%
 del /q %RemoveEntriesFromListsRAR%
+del /q %DetectProblematicRecordsForMutagenRAR%
 
 set BodyslideGroupGeneratorReleaseSet= ".\Release Sets\BodyslideGroupGenerator"
 mkdir %BodyslideGroupGeneratorReleaseSet%
@@ -52,6 +55,16 @@ mkdir %RemoveEntriesFromListsReleaseSet%
 xcopy /s /y ".\RemoveEntriesFromLists\bin\Release\net6.0" %CollectionReleaseSet%
 xcopy /s /y ".\RemoveEntriesFromLists\bin\Release\net6.0" %RemoveEntriesFromListsReleaseSet%
 
+set DetectFormLinksInRecordsReleaseSet= ".\Release Sets\DetectFormLinksInRecords"
+mkdir %DetectFormLinksInRecordsReleaseSet%
+xcopy /s /y ".\DetectFormLinksInRecords\bin\Release\net6.0" %CollectionReleaseSet%
+xcopy /s /y ".\DetectFormLinksInRecords\bin\Release\net6.0" %DetectFormLinksInRecordsReleaseSet%
+
+set DetectProblematicRecordsForMutagenReleaseSet= ".\Release Sets\DetectProblematicRecordsForMutagen"
+mkdir %DetectProblematicRecordsForMutagenReleaseSet%
+xcopy /s /y ".\DetectProblematicRecordsForMutagen\bin\Release\net6.0" %CollectionReleaseSet%
+xcopy /s /y ".\DetectProblematicRecordsForMutagen\bin\Release\net6.0" %DetectProblematicRecordsForMutagenReleaseSet%
+
 "C:\Program Files\WinRAR\WinRAR.exe" a -s -ep1 %CollectionRAR% %CollectionReleaseSet%
 "C:\Program Files\WinRAR\WinRAR.exe" a -s -ep1 %BodyslideGroupGeneratorRAR% %BodyslideGroupGeneratorReleaseSet%
 "C:\Program Files\WinRAR\WinRAR.exe" a -s -ep1 %DARPriorityRAR% %DARPriorityReleaseSet%
@@ -59,6 +72,8 @@ xcopy /s /y ".\RemoveEntriesFromLists\bin\Release\net6.0" %RemoveEntriesFromList
 "C:\Program Files\WinRAR\WinRAR.exe" a -s -ep1 %zMergeEnablerRAR% %zMergeEnablerReleaseSet%
 "C:\Program Files\WinRAR\WinRAR.exe" a -s -ep1 %CombineFoldersRAR% %CombineFoldersReleaseSet%
 "C:\Program Files\WinRAR\WinRAR.exe" a -s -ep1 %RemoveEntriesFromListsRAR% %RemoveEntriesFromListsReleaseSet%
+"C:\Program Files\WinRAR\WinRAR.exe" a -s -ep1 %DetectFormLinksInRecordsRAR% %DetectFormLinksInRecordsReleaseSet%
+"C:\Program Files\WinRAR\WinRAR.exe" a -s -ep1 %DetectProblematicRecordsForMutagenRAR% %DetectProblematicRecordsForMutagenReleaseSet%
 
 explorer.exe ".\Release Sets"
 

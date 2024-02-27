@@ -1,3 +1,8 @@
+# Version 1.5
+
+- New program DetectProblematicRecordsForMutagen
+- New program DetectFormLinksInRecords
+
 # Version 1.4
 
 - New program CombineFolders

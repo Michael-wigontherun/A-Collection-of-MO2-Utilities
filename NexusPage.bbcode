@@ -98,7 +98,7 @@ This does not edit anything so its fine to run over top of the data folder. Howe
 This will run over a specified plugin and remove any entries from LevelLists, Containers, and
 This will run on a single plugin. It will touch nothing but that one plugin.
 
-[color=#00ff00][size=4]RemoveEntriesFromListsFormLists that have a matching mod key that you specify.[/size][/color]
+[color=#00ff00][size=4]RemoveEntriesFromListsFormLists[/size][/color]
 
 [list=1]
 [*]Edit "RemoveEntriesFromLists.bat"
@@ -116,9 +116,38 @@ This will combine folders from separated folders. This will help with those anno
 [color=#00ff00][size=4]CombineFolders[/size][/color]
 
 [list=1]
+[*]Edit "Run CombineFolders.bat"
 [*]-P="Folder Start path to search" : Path to base folder
 [*]-O="Path to output to" : Folder you want the files output to, you can remove this if you want the base folder to also be the output folder
 [*]-S="Name of folder(s) to search for" : Folders you want copied
+[/list]
+[color=#00ffff][size=5]DetectProblematicRecordsForMutagen[/size][/color]
+
+This is a diagnostic tool to detect Records that can not be read Mutagen and can crash Mutagen based programs, like Synthesis or other Programs I have made using Mutagen.
+It will give you a list of records that are problematic for you to locate using xEdit.
+
+Do not tell me about errors this reports I can do nothing about them as it has to do with your plugins. It is designed to find and report errors. Fix your plugins yourself.
+
+[color=#00ff00][size=4]DetectProblematicRecordsForMutagen[/size][/color]
+
+[list=1]
+[*]Edit "Run DetectProblematicRecordsForMutagen.bat"
+[*]-P="Path to plugin" : The path to the plugin you suspect has an issue.
+[/list]
+[color=#00ffff][size=5]DetectFormLinksInRecords[/size][/color]
+
+This will detect any and all FormLinks inside your plugin and report them as a yaml file.
+This helps with removing master files from plugins. As it will tell you exactly which records are linked in a plugin so you can open it in xEdit and delete them manually.
+I will not add any kind of automatic deletion function to this.
+
+[color=#00ff00][size=4]DetectFormLinksInRecords[/size][/color]
+
+[list=1]
+[*]Edit "Run DetectFormLinksInRecords.bat"
+[*]-P="Path to plugin" : The path to the plugin you wish to have a report on
+[*]Extra sorting can be done with the -S= argument.
+Example: -S="doublejump.esp".
+Example: -S="doublejump.esp, INIGO.esp".
 [/list]
 [color=#00ffff][size=5]QA[/size][/color]
 
