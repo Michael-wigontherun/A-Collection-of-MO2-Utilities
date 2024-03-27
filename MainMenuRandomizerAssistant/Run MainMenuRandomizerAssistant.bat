@@ -1,0 +1,1 @@
+MainMenuRandomizerAssistant.exe -P="Path to folder containing multiple main menu replacer folders"

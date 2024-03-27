@@ -1,0 +1,33 @@
+{
+  "ModPath": "Mod Folder\\source\\Scripts",
+  "OutputLocation": "OutputFolder\\source\\scripts",
+  "ConfigurationNodes": [
+    {
+      "SearchString": "String to search for in file lines",
+      "DuplicateLine": 0,
+      "ReplaceSearch": null,
+      "ReplaceLine": null,
+      "LinesInsertAbove": false,
+      "Lines": null
+    },
+    {
+      "SearchString": "Game.IncrementSkill",
+      "DuplicateLine": 2,
+      "ReplaceSearch": null,
+      "ReplaceLine": null,
+      "LinesInsertAbove": false,
+      "Lines": null
+    },
+    {
+      "SearchString": "game.settime",
+      "DuplicateLine": 0,
+      "ReplaceSearch": null,
+      "ReplaceLine": "; game.settime",
+      "LinesInsertAbove": false,
+      "Lines": [
+        "Game.FadeOutGame(False, True, 60.0, 60.0)",
+        "GameHour.SetValue(GameHour.GetValue() + 1.0)"
+      ]
+    }
+  ]
+}

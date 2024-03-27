@@ -13,6 +13,7 @@ namespace DetectFormLinksInRecords
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
+
             string extraString = "Add plugin names here to only report on specific links or records. Can be list." +
                 "\nYou can also omit this arg and it will report on every link and rec." +
                 "\nExample: -S=\"doublejump.esp\"." +

@@ -13,6 +13,9 @@ set CombineFoldersRAR= ".\Release Sets\CombineFolders.rar"
 set RemoveEntriesFromListsRAR= ".\Release Sets\RemoveEntriesFromLists.rar"
 set DetectFormLinksInRecordsRAR= ".\Release Sets\DetectFormLinksInRecords.rar"
 set DetectProblematicRecordsForMutagenRAR= ".\Release Sets\DetectProblematicRecordsForMutagen.rar"
+set MainMenuRandomizerAssistantRAR= ".\Release Sets\MainMenuRandomizerAssistant.rar"
+set MainMenuRandomizerAssistantRAR= ".\Release Sets\MainMenuRandomizerAssistant.rar"
+set ScriptEditorRAR= ".\Release Sets\ScriptEditor.rar"
 
 del /q %CollectionRAR%
 del /q %BodyslideGroupGeneratorRAR%
@@ -22,6 +25,8 @@ del /q %zMergeEnablerRAR%
 del /q %CombineFoldersRAR%
 del /q %RemoveEntriesFromListsRAR%
 del /q %DetectProblematicRecordsForMutagenRAR%
+del /q %MainMenuRandomizerAssistantRAR%
+del /q %ScriptEditorRAR%
 
 set BodyslideGroupGeneratorReleaseSet= ".\Release Sets\BodyslideGroupGenerator"
 mkdir %BodyslideGroupGeneratorReleaseSet%
@@ -65,6 +70,16 @@ mkdir %DetectProblematicRecordsForMutagenReleaseSet%
 xcopy /s /y ".\DetectProblematicRecordsForMutagen\bin\Release\net6.0" %CollectionReleaseSet%
 xcopy /s /y ".\DetectProblematicRecordsForMutagen\bin\Release\net6.0" %DetectProblematicRecordsForMutagenReleaseSet%
 
+set MainMenuRandomizerAssistantReleaseSet= ".\Release Sets\MainMenuRandomizerAssistant"
+mkdir %MainMenuRandomizerAssistantReleaseSet%
+xcopy /s /y ".\MainMenuRandomizerAssistant\bin\Release\net6.0" %CollectionReleaseSet%
+xcopy /s /y ".\MainMenuRandomizerAssistant\bin\Release\net6.0" %MainMenuRandomizerAssistantReleaseSet%
+
+set ScriptEditorReleaseSet= ".\Release Sets\ScriptEditor"
+mkdir %ScriptEditorReleaseSet%
+xcopy /s /y ".\ScriptEditor\bin\Release\net6.0" %CollectionReleaseSet%
+xcopy /s /y ".\ScriptEditor\bin\Release\net6.0" %ScriptEditorReleaseSet%
+
 "C:\Program Files\WinRAR\WinRAR.exe" a -s -ep1 %CollectionRAR% %CollectionReleaseSet%
 "C:\Program Files\WinRAR\WinRAR.exe" a -s -ep1 %BodyslideGroupGeneratorRAR% %BodyslideGroupGeneratorReleaseSet%
 "C:\Program Files\WinRAR\WinRAR.exe" a -s -ep1 %DARPriorityRAR% %DARPriorityReleaseSet%
@@ -74,6 +89,8 @@ xcopy /s /y ".\DetectProblematicRecordsForMutagen\bin\Release\net6.0" %DetectPro
 "C:\Program Files\WinRAR\WinRAR.exe" a -s -ep1 %RemoveEntriesFromListsRAR% %RemoveEntriesFromListsReleaseSet%
 "C:\Program Files\WinRAR\WinRAR.exe" a -s -ep1 %DetectFormLinksInRecordsRAR% %DetectFormLinksInRecordsReleaseSet%
 "C:\Program Files\WinRAR\WinRAR.exe" a -s -ep1 %DetectProblematicRecordsForMutagenRAR% %DetectProblematicRecordsForMutagenReleaseSet%
+"C:\Program Files\WinRAR\WinRAR.exe" a -s -ep1 %MainMenuRandomizerAssistantRAR% %MainMenuRandomizerAssistantReleaseSet%
+"C:\Program Files\WinRAR\WinRAR.exe" a -s -ep1 %ScriptEditorRAR% %ScriptEditorReleaseSet%
 
 explorer.exe ".\Release Sets"
 

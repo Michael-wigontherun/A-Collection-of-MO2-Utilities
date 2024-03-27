@@ -1,3 +1,8 @@
+# Version 1.6
+
+- New program MainMenuRandomizerAssistant
+- New program ScriptEditor
+
 # Version 1.5
 
 - New program DetectProblematicRecordsForMutagen

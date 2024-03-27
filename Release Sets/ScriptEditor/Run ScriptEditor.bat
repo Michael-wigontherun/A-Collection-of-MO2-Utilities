@@ -1,0 +1,1 @@
+ScriptEditor.exe -P="Path to Configuartion Json"
