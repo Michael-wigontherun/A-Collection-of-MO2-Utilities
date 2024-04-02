@@ -126,9 +126,9 @@ These are tools to help automating scripts.
 
 ### ScriptEditor
 1. Duplicate "ScriptEditor.Default.json" and rename it to what ever your want
-2. Edit the new file, See below data brakedown
+2. Edit the new file, See below data breakdown
 3. Edit "Run ScriptEditor.bat"
-4. -P="Path to Configuartion Json" : Set this to the path to your newly configured json file
+4. -P="Path to Configuration Json" : Set this to the path to your newly configured json file
 
 #### Data Breakdown
 All file paths must have there \'s doubled to be \\
