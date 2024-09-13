@@ -15,6 +15,9 @@
     <None Update="Enable_zMerged_Disabled_Plugins.bat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Run Enable_zMerged_Disabled_Plugins.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -7,6 +7,12 @@ I will take small requests and if I like the idea I'll build something, just cre
 Install instructions are applied the same to all.
 1. Download and Install .Net 6 Desktop Runtime.
 2. Download and Whatever from here and unpack them to a folder. They can all sit nicely in the same folder.
+3. Open the _DefaultSettings.json, and set your Data folder path.
+File Paths in json must be correctly escaped, ensure all \ are doubled.
+```
+Incorrect = "common\Skyrim Special Edition\Data"
+Correct   = "common\\Skyrim Special Edition\\Data"
+```
 
 ## Usage Directions
 For console Applications you can double click the exe to bring up the help menu or run them with the -help argument.
@@ -136,7 +142,7 @@ All file paths must have there \'s doubled to be \\
 "ModPath"                       This is the path to the mods script files you want to edit
 "OutputLocation"                Path you want the edited psc files to be outputted to
 "ConfigurationNodes"            Collection of nodes
-    "SearchString"              Text to seach for in script lines 
+    "SearchString"              Text to search for in script lines 
     "DuplicateLine"             An integer denoting how many times to duplicate the line
     "ReplaceSearch"             String to replace the searched for string in scripts
     "ReplaceLine"               Line to replace the line you searched for
@@ -148,9 +154,18 @@ Use something like [jsonlint](https://jsonlint.com/) to validate your json befor
 
 ### ScriptCompiler.bat
 This is just a handy bat file to help people compile there scripts.
-This requires the CK to be installed and set up correctly. Its simple just install and run the CK atleast once to unpack the source files.
+This requires the CK to be installed and set up correctly. Its simple just install and run the CK at least once to unpack the source files.
 1. Edit "ScriptCompiler.bat", instructions are inside in comments
 
+## PluginCheckerForMerge
+This will tell you what is probably fine to merge, using my criteria.
+- No Navigation Mesh info Maps
+- Less than 10 new forms
+- Not a ESM or ESP-M
+
+### PluginCheckerForMerge
+1. Edit "Run PluginCheckerForMerge.bat"
+2. -P="Path to MO2 plugins.txt"
 
 ## QA
 Q: Why only MO2?

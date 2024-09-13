@@ -16,6 +16,7 @@ set DetectProblematicRecordsForMutagenRAR= ".\Release Sets\DetectProblematicReco
 set MainMenuRandomizerAssistantRAR= ".\Release Sets\MainMenuRandomizerAssistant.rar"
 set MainMenuRandomizerAssistantRAR= ".\Release Sets\MainMenuRandomizerAssistant.rar"
 set ScriptEditorRAR= ".\Release Sets\ScriptEditor.rar"
+set PluginCheckerForMergeRAR= ".\Release Sets\PluginCheckerForMerge.rar"
 
 del /q %CollectionRAR%
 del /q %BodyslideGroupGeneratorRAR%
@@ -27,6 +28,7 @@ del /q %RemoveEntriesFromListsRAR%
 del /q %DetectProblematicRecordsForMutagenRAR%
 del /q %MainMenuRandomizerAssistantRAR%
 del /q %ScriptEditorRAR%
+del /q %PluginCheckerForMergeRAR%
 
 set BodyslideGroupGeneratorReleaseSet= ".\Release Sets\BodyslideGroupGenerator"
 mkdir %BodyslideGroupGeneratorReleaseSet%
@@ -80,6 +82,12 @@ mkdir %ScriptEditorReleaseSet%
 xcopy /s /y ".\ScriptEditor\bin\Release\net6.0" %CollectionReleaseSet%
 xcopy /s /y ".\ScriptEditor\bin\Release\net6.0" %ScriptEditorReleaseSet%
 
+set PluginCheckerForMergeSet= ".\Release Sets\PluginCheckerForMerge"
+mkdir %PluginCheckerForMergeSet%
+xcopy /s /y ".\PluginCheckerForMerge\bin\Release\net6.0" %CollectionReleaseSet%
+xcopy /s /y ".\PluginCheckerForMerge\bin\Release\net6.0" %PluginCheckerForMergeSet%
+
+
 "C:\Program Files\WinRAR\WinRAR.exe" a -s -ep1 %CollectionRAR% %CollectionReleaseSet%
 "C:\Program Files\WinRAR\WinRAR.exe" a -s -ep1 %BodyslideGroupGeneratorRAR% %BodyslideGroupGeneratorReleaseSet%
 "C:\Program Files\WinRAR\WinRAR.exe" a -s -ep1 %DARPriorityRAR% %DARPriorityReleaseSet%
@@ -91,6 +99,7 @@ xcopy /s /y ".\ScriptEditor\bin\Release\net6.0" %ScriptEditorReleaseSet%
 "C:\Program Files\WinRAR\WinRAR.exe" a -s -ep1 %DetectProblematicRecordsForMutagenRAR% %DetectProblematicRecordsForMutagenReleaseSet%
 "C:\Program Files\WinRAR\WinRAR.exe" a -s -ep1 %MainMenuRandomizerAssistantRAR% %MainMenuRandomizerAssistantReleaseSet%
 "C:\Program Files\WinRAR\WinRAR.exe" a -s -ep1 %ScriptEditorRAR% %ScriptEditorReleaseSet%
+"C:\Program Files\WinRAR\WinRAR.exe" a -s -ep1 %PluginCheckerForMergeRAR% %PluginCheckerForMergeSet%
 
 explorer.exe ".\Release Sets"
 

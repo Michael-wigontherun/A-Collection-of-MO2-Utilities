@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <None Update="Run ScriptEditor.bat">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="ScriptCompiler.bat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

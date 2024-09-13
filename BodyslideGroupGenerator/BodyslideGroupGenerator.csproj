@@ -16,6 +16,9 @@
     <None Update="BodyslideGroupGenerator.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Run BodyslideGroupGenerator.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 

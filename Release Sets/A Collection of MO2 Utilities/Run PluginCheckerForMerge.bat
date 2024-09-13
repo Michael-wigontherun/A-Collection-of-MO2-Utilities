@@ -1,0 +1,1 @@
+PluginCheckerForMerge.exe -P="Plugins.txt"

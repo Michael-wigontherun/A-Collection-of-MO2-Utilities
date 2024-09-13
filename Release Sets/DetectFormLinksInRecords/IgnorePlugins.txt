@@ -1,0 +1,31 @@
+Skyrim.esm
+Update.esm
+Dawnguard.esm
+HearthFires.esm
+Dragonborn.esm
+Unofficial Skyrim Special Edition Patch.esp
+Unofficial Skyrim Modders Patch.esp
+Occ_Skyrim_Tamriel.esp
+Lux.esp
+Lux Orbis.esp
+Lux Via - plugin.esp
+JKs Skyrim.esp
+JKs Skyrim - Fixes.esp
+BSAssets.esm
+BSHeartland.esm
+BS_DLC_patch.esp
+Skyrim Extended Cut - Saints and Seducers.esp
+Chanterelle World.esp
+TempestIsleVacMerge.esp
+TheBawbsWardenOfTheCoast.esp
+Vigilant.esm
+Glenmoril.esm
+Unslaad.esm
+LegacyoftheDragonborn.esm
+LegacyoftheDragonborn0.esp
+SeranaDialogAddon.esp
+Northern Roads.esp
+FNIS.esp
+Sacrosanct - Vampires of Skyrim.esp
+Inigo.esp
+Lucien.esp

@@ -8,7 +8,7 @@ internal class Program
         Console.WriteLine("Hello, World!");
         GL._Settings = Settings.Args(typeof(Program).Namespace!.ToString(), args, false, false, false, null);
 
-        string path = GL._Settings.SetDefaultOutputPaths("Reports", "DefaultOutputName");
+        string outputPath = GL._Settings.SetDefaultOutputPaths("Reports", "DefaultOutputName");
 
 
 
@@ -18,7 +18,7 @@ internal class Program
 
 
 
-        GL.Explorer(GL._Settings.OutputPath, path);
+        GL.Explorer(GL._Settings.OutputPath, outputPath);
         GL.EndPause();
     }
 }

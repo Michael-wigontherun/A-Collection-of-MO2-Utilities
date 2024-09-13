@@ -1,10 +1,12 @@
 ﻿using System.Diagnostics;
+using System.Text.Json;
 
 namespace MO2CollectionGlobalLibrary
 {
     public static class GL
     {
         public static Settings _Settings = new();
+        public static JSON _JSON = new();
 
         public static void WriteLine(string line)
         {
@@ -183,7 +185,8 @@ namespace MO2CollectionGlobalLibrary
                     Environment.Exit(0);
                 }
             }
-            
+
+            GL._JSON = JsonSerializer.Deserialize<JSON>(File.ReadAllText("_DefaultSettings.json"))!;
 
             return settings;
         }
@@ -233,5 +236,10 @@ namespace MO2CollectionGlobalLibrary
         {
             return System.IO.Path.Combine(OutputPath, OutputName);
         }
+    }
+
+    public class JSON
+    {
+        public string DataFolderPath { get; set; } = "";
     }
 }

@@ -20,6 +20,9 @@
     <None Update="Example CSV\The Witcher MCO - Test.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Run DARPriorityRemapper.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

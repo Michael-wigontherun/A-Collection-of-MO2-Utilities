@@ -78,13 +78,7 @@ namespace RemoveEntriesFromLists
 
 
             mod.WriteToBinary(GL._Settings.Path,
-                new Mutagen.Bethesda.Plugins.Binary.Parameters.BinaryWriteParameters()
-                {
-                    MastersListOrdering =
-                    new Mutagen.Bethesda.Plugins.Binary.Parameters.MastersListOrderingByLoadOrder(
-                        Mutagen.Bethesda.Plugins.Order.LoadOrder.GetLoadOrderListings(GameRelease.SkyrimSE,
-                        new Noggog.DirectoryPath("DataFolderPath")).ToLoadOrder())
-                });
+               MutagenHelper.MutagenHelper.GetPluginOrder());
         }
     }
 }
