@@ -162,6 +162,7 @@ This will tell you what is probably fine to merge, using my criteria.
 - No Navigation Mesh info Maps
 - Less than 10 new forms
 - Not a ESM or ESP-M
+This is not Gospel and all the things you should consider, this is just my personal starting ground to find plugins to consider.
 
 ### PluginCheckerForMerge
 1. Edit "Run PluginCheckerForMerge.bat"
